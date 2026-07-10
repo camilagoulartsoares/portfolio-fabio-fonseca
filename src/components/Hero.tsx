@@ -14,32 +14,23 @@ const highlights = [
 
 export function Hero() {
   return (
-    <section
-      id="topo"
-      className="relative overflow-hidden bg-[#f3f6f7] pt-[76px]"
-    >
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-y-0 right-0 w-[55%] bg-[radial-gradient(ellipse_at_70%_40%,rgba(15,76,92,0.09),transparent_60%)]"
-      />
-
-      <div className="relative mx-auto grid w-full max-w-[1200px] items-end gap-8 px-5 pt-10 pb-0 lg:grid-cols-[1.05fr_0.95fr] lg:gap-6 lg:pt-6">
+    <section id="topo" className="relative overflow-hidden bg-white pt-[76px]">
+      <div className="relative mx-auto grid w-full max-w-[1200px] items-center gap-10 px-5 py-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:py-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55 }}
-          className="flex flex-col justify-center py-8 lg:min-h-[640px] lg:py-16"
+          transition={{ duration: 0.5 }}
         >
           <p className="text-[12px] font-semibold tracking-[0.2em] text-petroleum uppercase">
             Engenheiro Mecânico · UNIFEI
           </p>
 
-          <h1 className="mt-5 text-[clamp(3.2rem,7.5vw,5.6rem)] leading-[0.9] font-extrabold tracking-[-0.045em] text-ink uppercase">
+          <h1 className="mt-5 text-[clamp(3.2rem,7.5vw,5.4rem)] leading-[0.9] font-extrabold tracking-[-0.045em] text-ink uppercase">
             Fábio
             <span className="mt-1 block text-petroleum">Fonseca</span>
           </h1>
 
-          <p className="mt-7 max-w-[34rem] text-[clamp(1.05rem,2vw,1.35rem)] leading-snug font-medium text-ink/90">
+          <p className="mt-7 max-w-[34rem] text-[clamp(1.05rem,2vw,1.3rem)] leading-snug font-medium text-ink/90">
             Projetos mecânicos, impressão 3D e miniaturas com precisão de
             engenharia.
           </p>
@@ -59,13 +50,13 @@ export function Hero() {
             </a>
             <a
               href="#contato"
-              className="inline-flex items-center gap-2 rounded-full border border-petroleum/25 bg-white/70 px-7 py-3.5 text-[12px] font-bold tracking-[0.08em] text-petroleum uppercase backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-petroleum"
+              className="inline-flex items-center gap-2 rounded-full border border-line px-7 py-3.5 text-[12px] font-bold tracking-[0.08em] text-ink uppercase transition-all duration-300 hover:-translate-y-0.5 hover:border-petroleum hover:text-petroleum"
             >
               Contato
             </a>
           </div>
 
-          <div className="mt-12 flex items-center gap-3 border-t border-petroleum/10 pt-7">
+          <div className="mt-12 flex items-center gap-3 border-t border-line pt-7">
             <p className="mr-1 text-[10px] font-bold tracking-[0.14em] text-muted uppercase">
               Destaques
             </p>
@@ -73,7 +64,7 @@ export function Hero() {
               <a
                 key={item.label}
                 href="#projetos"
-                className="group relative h-14 w-14 overflow-hidden rounded-xl border border-white bg-white shadow-[0_8px_24px_rgba(15,76,92,0.08)] transition-transform duration-300 hover:-translate-y-0.5"
+                className="group relative h-14 w-14 overflow-hidden rounded-xl border border-line bg-bg-muted transition-transform duration-300 hover:-translate-y-0.5"
                 aria-label={item.label}
               >
                 <Image
@@ -89,35 +80,26 @@ export function Hero() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 28 }}
+          initial={{ opacity: 0, y: 22 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.65, delay: 0.08 }}
-          className="relative mx-auto w-full max-w-[520px] lg:max-w-none"
+          transition={{ duration: 0.55, delay: 0.06 }}
+          className="relative mx-auto w-full max-w-[420px] lg:max-w-none"
         >
-          <div className="relative isolate">
-            <div
-              aria-hidden
-              className="absolute inset-x-[8%] bottom-0 h-[78%] rounded-[2rem] bg-gradient-to-b from-[#d7e4e8] via-[#c5d6db] to-[#0f4c5c]/15"
-            />
-            <div
-              aria-hidden
-              className="absolute inset-x-[18%] top-[12%] h-[42%] rounded-full bg-white/50 blur-3xl"
-            />
-
+          {/* Foto natural em quadro limpo — sem cutout */}
+          <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] bg-bg-muted shadow-[0_24px_60px_rgba(15,76,92,0.12)] ring-1 ring-black/5">
             <Image
-              src={`${base}/images/fabio-hero.png`}
+              src={`${base}/images/fabio-portrait.jpg`}
               alt="Fábio Fonseca, Engenheiro Mecânico"
-              width={480}
-              height={869}
+              fill
               priority
-              className="relative z-10 mx-auto h-auto w-[min(100%,440px)] object-contain object-bottom drop-shadow-[0_30px_50px_rgba(15,76,92,0.22)]"
-            />
-
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-16 bg-gradient-to-t from-[#f3f6f7] to-transparent"
+              sizes="(max-width:1024px) 90vw, 420px"
+              className="object-cover object-[center_20%]"
             />
           </div>
+
+          <p className="mt-4 text-center text-[11px] font-semibold tracking-[0.14em] text-muted uppercase lg:text-left">
+            Poço Fundo · Minas Gerais
+          </p>
         </motion.div>
       </div>
     </section>
