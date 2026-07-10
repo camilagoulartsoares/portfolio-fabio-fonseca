@@ -1,14 +1,15 @@
 import type { NextConfig } from "next";
 
 const repo = "portfolio-fabio-fonseca";
-const isProd = process.env.NODE_ENV === "production";
-const basePath = isProd ? `/${repo}` : "";
+// Só usa basePath no GitHub Pages; no Vercel o site fica na raiz do domínio.
+const forGitHubPages = process.env.GITHUB_PAGES === "true";
+const basePath = forGitHubPages ? `/${repo}` : "";
 
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
   basePath,
-  assetPrefix: isProd ? `${basePath}/` : undefined,
+  assetPrefix: forGitHubPages ? `${basePath}/` : undefined,
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
   },

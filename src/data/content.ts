@@ -106,6 +106,16 @@ export const projects = [
     image: asset("/images/projects/bandeirante-frente.png"),
   },
   {
+    title: "Troller T4 Copa Troller — Escala 1/10",
+    category: "Miniatura · Off-road",
+    image: asset("/images/projects/troller-frente.png"),
+  },
+  {
+    title: "Volkswagen Brasília — Escala 1/10",
+    category: "Miniatura · Custom",
+    image: asset("/images/projects/brasilia.png"),
+  },
+  {
     title: "Volkswagen Gol Quadrado — Escala 1/10",
     category: "Miniatura · Prototipagem",
     image: asset("/images/projects/gol-quadrado-frente.png"),
@@ -167,6 +177,18 @@ export const gallery = [
   },
   {
     src: asset("/images/projects/bandeirante-traseira.png"),
+    category: "maquetes",
+  },
+  {
+    src: asset("/images/projects/troller-frente.png"),
+    category: "maquetes",
+  },
+  {
+    src: asset("/images/projects/troller-traseira.png"),
+    category: "maquetes",
+  },
+  {
+    src: asset("/images/projects/brasilia.png"),
     category: "maquetes",
   },
   {

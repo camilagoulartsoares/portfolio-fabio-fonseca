@@ -18,7 +18,7 @@ export function Projects() {
           </h2>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, i) => (
             <motion.article
               key={project.title}
@@ -33,7 +33,7 @@ export function Projects() {
                   src={project.image}
                   alt={project.title}
                   fill
-                  sizes="(max-width:1024px) 50vw, 25vw"
+                  sizes="(max-width:1024px) 50vw, 33vw"
                   className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
