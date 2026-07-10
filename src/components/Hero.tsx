@@ -36,7 +36,7 @@ export function Hero() {
             />
             <div className="relative flex min-h-[520px] items-end justify-center px-4 pt-10 sm:min-h-[580px]">
               <Image
-                src="/images/fabio-hero.png"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/fabio-hero.png`}
                 alt="Fábio Fonseca, Engenheiro Mecânico"
                 width={480}
                 height={869}
