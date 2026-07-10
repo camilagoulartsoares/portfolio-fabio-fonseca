@@ -1,6 +1,24 @@
 "use client";
 
-import { ArrowRight, Mail, MessageCircle } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
+
+const contacts = {
+  whatsapp: {
+    href: "https://wa.me/553598705746",
+    label: "WhatsApp",
+    detail: "+55 35 9870-5746",
+  },
+  instagram: {
+    href: "https://www.instagram.com/fabio.ofonseca/",
+    label: "Instagram",
+    detail: "@fabio.ofonseca",
+  },
+  linkedin: {
+    href: "https://www.linkedin.com/in/f%C3%A1bio-fonseca-b76416205/",
+    label: "LinkedIn",
+    detail: "Fábio Fonseca",
+  },
+} as const;
 
 function IconInstagram({ size = 18 }: { size?: number }) {
   return (
@@ -46,38 +64,54 @@ export function Contact() {
         <div className="rounded-3xl border border-line bg-white p-6 shadow-[0_16px_40px_rgba(17,17,17,0.05)]">
           <div className="grid gap-3">
             <a
-              href="https://wa.me/5500000000000"
-              className="inline-flex items-center gap-3 rounded-xl border border-line px-4 py-3 text-sm font-semibold text-ink transition-colors duration-300 hover:border-petroleum hover:text-petroleum"
-            >
-              <MessageCircle size={18} /> WhatsApp
-            </a>
-            <a
-              href="https://instagram.com/fabio.ofonseca"
+              href={contacts.whatsapp.href}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-3 rounded-xl border border-line px-4 py-3 text-sm font-semibold text-ink transition-colors duration-300 hover:border-petroleum hover:text-petroleum"
             >
-              <IconInstagram /> Instagram
+              <MessageCircle size={18} />
+              <span className="flex flex-col leading-tight">
+                <span>{contacts.whatsapp.label}</span>
+                <span className="text-[12px] font-medium text-muted">
+                  {contacts.whatsapp.detail}
+                </span>
+              </span>
             </a>
             <a
-              href="https://www.linkedin.com"
+              href={contacts.instagram.href}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-3 rounded-xl border border-line px-4 py-3 text-sm font-semibold text-ink transition-colors duration-300 hover:border-petroleum hover:text-petroleum"
             >
-              <IconLinkedin /> LinkedIn
+              <IconInstagram />
+              <span className="flex flex-col leading-tight">
+                <span>{contacts.instagram.label}</span>
+                <span className="text-[12px] font-medium text-muted">
+                  {contacts.instagram.detail}
+                </span>
+              </span>
             </a>
             <a
-              href="mailto:contato@fabiofonseca.dev"
+              href={contacts.linkedin.href}
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center gap-3 rounded-xl border border-line px-4 py-3 text-sm font-semibold text-ink transition-colors duration-300 hover:border-petroleum hover:text-petroleum"
             >
-              <Mail size={18} /> Email
+              <IconLinkedin />
+              <span className="flex flex-col leading-tight">
+                <span>{contacts.linkedin.label}</span>
+                <span className="text-[12px] font-medium text-muted">
+                  {contacts.linkedin.detail}
+                </span>
+              </span>
             </a>
             <a
-              href="mailto:contato@fabiofonseca.dev"
+              href={contacts.whatsapp.href}
+              target="_blank"
+              rel="noreferrer"
               className="mt-1 inline-flex w-full items-center justify-center gap-2 rounded-full bg-petroleum px-5 py-3.5 text-[12px] font-bold tracking-[0.08em] text-white uppercase transition-all duration-300 hover:-translate-y-0.5 hover:bg-petroleum-soft"
             >
-              Entrar em Contato <ArrowRight size={16} />
+              Falar no WhatsApp <ArrowRight size={16} />
             </a>
           </div>
         </div>
