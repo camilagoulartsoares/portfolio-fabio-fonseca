@@ -4,106 +4,119 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
+const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+const highlights = [
+  { src: `${base}/images/projects/mitsubishi-3000gt.png`, label: "3000GT" },
+  { src: `${base}/images/projects/bandeirante-frente.png`, label: "Bandeirante" },
+  { src: `${base}/images/projects/troller-frente.png`, label: "Troller" },
+];
+
 export function Hero() {
   return (
-    <section id="topo" className="relative overflow-hidden bg-bg-soft pt-[76px]">
+    <section
+      id="topo"
+      className="relative overflow-hidden bg-[#f3f6f7] pt-[76px]"
+    >
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.045]"
-        style={{
-          backgroundImage:
-            "url(\"data:image/svg+xml,%3Csvg width='600' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%230F4C5C' stroke-width='1'%3E%3Ccircle cx='300' cy='300' r='120'/%3E%3Ccircle cx='300' cy='300' r='180'/%3E%3Cpath d='M300 80v440M80 300h440M160 160l280 280M440 160L160 440'/%3E%3C/g%3E%3C/svg%3E\")",
-          backgroundPosition: "right 8% center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "min(520px, 55vw)",
-        }}
+        className="pointer-events-none absolute inset-y-0 right-0 w-[55%] bg-[radial-gradient(ellipse_at_70%_40%,rgba(15,76,92,0.09),transparent_60%)]"
       />
 
-      <div className="relative mx-auto grid w-full max-w-[1200px] gap-10 px-5 py-14 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-14 lg:py-20">
+      <div className="relative mx-auto grid w-full max-w-[1200px] items-end gap-8 px-5 pt-10 pb-0 lg:grid-cols-[1.05fr_0.95fr] lg:gap-6 lg:pt-6">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="relative"
+          transition={{ duration: 0.55 }}
+          className="flex flex-col justify-center py-8 lg:min-h-[640px] lg:py-16"
         >
-          <div className="relative overflow-hidden rounded-[22px] bg-[#dfe7ea]">
-            <div
-              className="absolute inset-0 scale-110 bg-cover bg-center opacity-40 blur-sm"
-              style={{
-                backgroundImage:
-                  "url(https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=60)",
-              }}
-            />
-            <div className="relative flex min-h-[520px] items-end justify-center px-4 pt-10 sm:min-h-[580px]">
-              <Image
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/fabio-hero.png`}
-                alt="Fábio Fonseca, Engenheiro Mecânico"
-                width={480}
-                height={869}
-                priority
-                className="relative z-10 h-auto w-[min(100%,420px)] object-contain drop-shadow-[0_20px_40px_rgba(15,76,92,0.25)]"
-              />
-            </div>
+          <p className="text-[12px] font-semibold tracking-[0.2em] text-petroleum uppercase">
+            Engenheiro Mecânico · UNIFEI
+          </p>
+
+          <h1 className="mt-5 text-[clamp(3.2rem,7.5vw,5.6rem)] leading-[0.9] font-extrabold tracking-[-0.045em] text-ink uppercase">
+            Fábio
+            <span className="mt-1 block text-petroleum">Fonseca</span>
+          </h1>
+
+          <p className="mt-7 max-w-[34rem] text-[clamp(1.05rem,2vw,1.35rem)] leading-snug font-medium text-ink/90">
+            Projetos mecânicos, impressão 3D e miniaturas com precisão de
+            engenharia.
+          </p>
+
+          <p className="mt-4 max-w-[32rem] text-[15px] leading-7 text-muted">
+            Modelagem CAD, prototipagem e confecção de veículos em escala — do
+            conceito à peça física, com polímeros, resinas e documentação
+            técnica.
+          </p>
+
+          <div className="mt-9 flex flex-wrap items-center gap-3">
+            <a
+              href="#projetos"
+              className="inline-flex items-center gap-2 rounded-full bg-petroleum px-7 py-3.5 text-[12px] font-bold tracking-[0.08em] text-white uppercase transition-all duration-300 hover:-translate-y-0.5 hover:bg-petroleum-soft"
+            >
+              Ver projetos <ArrowRight size={16} />
+            </a>
+            <a
+              href="#contato"
+              className="inline-flex items-center gap-2 rounded-full border border-petroleum/25 bg-white/70 px-7 py-3.5 text-[12px] font-bold tracking-[0.08em] text-petroleum uppercase backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-petroleum"
+            >
+              Contato
+            </a>
           </div>
 
-          <div className="absolute top-5 left-5 z-20 max-w-[210px] rounded-xl bg-petroleum px-4 py-3 text-white shadow-lg">
-            <p className="text-[10px] font-bold tracking-[0.14em] uppercase">
-              Engenheiro Mecânico
+          <div className="mt-12 flex items-center gap-3 border-t border-petroleum/10 pt-7">
+            <p className="mr-1 text-[10px] font-bold tracking-[0.14em] text-muted uppercase">
+              Destaques
             </p>
-            <p className="mt-1 text-[13px] leading-snug text-white/90">
-              Desenvolvendo soluções que movem ideias.
-            </p>
-          </div>
-
-          <div className="absolute bottom-5 left-5 z-20 overflow-hidden rounded-xl border border-white/70 bg-white/90 shadow-md backdrop-blur">
-            <Image
-              src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=280&q=80"
-              alt="Interface de software CAD"
-              width={140}
-              height={96}
-              className="h-24 w-36 object-cover"
-            />
+            {highlights.map((item) => (
+              <a
+                key={item.label}
+                href="#projetos"
+                className="group relative h-14 w-14 overflow-hidden rounded-xl border border-white bg-white shadow-[0_8px_24px_rgba(15,76,92,0.08)] transition-transform duration-300 hover:-translate-y-0.5"
+                aria-label={item.label}
+              >
+                <Image
+                  src={item.src}
+                  alt={item.label}
+                  fill
+                  sizes="56px"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </a>
+            ))}
           </div>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="relative"
+          transition={{ duration: 0.65, delay: 0.08 }}
+          className="relative mx-auto w-full max-w-[520px] lg:max-w-none"
         >
-          <p className="text-[12px] font-semibold tracking-[0.16em] text-muted uppercase">
-            Olá, sou
-          </p>
-          <h1 className="mt-2 text-[clamp(3rem,8vw,5.4rem)] leading-[0.92] font-extrabold tracking-[-0.04em] uppercase">
-            <span className="block text-ink">Fábio</span>
-            <span className="block text-petroleum">Fonseca</span>
-          </h1>
-          <p className="mt-4 inline-flex items-center gap-3 text-[13px] font-bold tracking-[0.12em] text-ink uppercase">
-            <span className="h-px w-8 bg-petroleum" />
-            Engenheiro Mecânico
-          </p>
-          <p className="mt-5 max-w-xl text-[clamp(1.15rem,2.2vw,1.45rem)] leading-snug font-semibold text-ink">
-            Projetos mecânicos, impressão 3D e miniaturas com precisão de engenharia.
-          </p>
-          <p className="mt-4 max-w-xl text-[15px] leading-7 text-muted">
-            Graduado pela UNIFEI. Atuo com modelagem CAD, prototipagem, drones
-            agrícolas e confecção de maquetes e veículos em escala — do conceito
-            à peça física, com polímeros, resinas e documentação técnica.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#projetos"
-              className="inline-flex items-center gap-2 rounded-full bg-petroleum px-6 py-3.5 text-[12px] font-bold tracking-[0.08em] text-white uppercase transition-all duration-300 hover:-translate-y-0.5 hover:bg-petroleum-soft"
-            >
-              Ver Projetos <ArrowRight size={16} />
-            </a>
-            <a
-              href="#contato"
-              className="inline-flex items-center gap-2 rounded-full border border-ink/20 px-6 py-3.5 text-[12px] font-bold tracking-[0.08em] text-ink uppercase transition-all duration-300 hover:-translate-y-0.5 hover:border-petroleum hover:text-petroleum"
-            >
-              Entrar em Contato <ArrowRight size={16} />
-            </a>
+          <div className="relative isolate">
+            <div
+              aria-hidden
+              className="absolute inset-x-[8%] bottom-0 h-[78%] rounded-[2rem] bg-gradient-to-b from-[#d7e4e8] via-[#c5d6db] to-[#0f4c5c]/15"
+            />
+            <div
+              aria-hidden
+              className="absolute inset-x-[18%] top-[12%] h-[42%] rounded-full bg-white/50 blur-3xl"
+            />
+
+            <Image
+              src={`${base}/images/fabio-hero.png`}
+              alt="Fábio Fonseca, Engenheiro Mecânico"
+              width={480}
+              height={869}
+              priority
+              className="relative z-10 mx-auto h-auto w-[min(100%,440px)] object-contain object-bottom drop-shadow-[0_30px_50px_rgba(15,76,92,0.22)]"
+            />
+
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-16 bg-gradient-to-t from-[#f3f6f7] to-transparent"
+            />
           </div>
         </motion.div>
       </div>
