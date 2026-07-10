@@ -38,8 +38,8 @@ export function Contact() {
             Vamos Conversar?
           </h2>
           <p className="mt-4 max-w-md text-[15px] leading-7 text-muted">
-            Conte o desafio do seu projeto. Posso ajudar com concepção, CAD,
-            prototipagem e documentação técnica.
+            Conte o desafio do seu projeto. Posso ajudar com modelagem CAD,
+            impressão 3D, miniaturas, drones e documentação técnica.
           </p>
         </div>
 

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Award, Boxes, Sparkles, Target } from "lucide-react";
-import { stats, timeline } from "@/data/content";
+import { aboutText, stats, timeline } from "@/data/content";
 
 const icons = [Boxes, Target, Award, Sparkles];
 
@@ -20,13 +20,13 @@ export function About() {
             Sobre mim
           </p>
           <h2 className="mt-3 text-[clamp(1.6rem,3vw,2.1rem)] leading-tight font-bold text-ink">
-            Engenharia que resolve problemas e cria possibilidades.
+            {aboutText.headline}
           </h2>
-          <p className="mt-4 text-[15px] leading-7 text-muted">
-            Sou apaixonado por transformar ideias em soluções mecânicas concretas.
-            Trabalho com projeto, modelagem e prototipagem para entregar resultados
-            confiáveis, documentados e prontos para o mundo real.
-          </p>
+          {aboutText.body.split("\n\n").map((paragraph) => (
+            <p key={paragraph.slice(0, 24)} className="mt-4 text-[15px] leading-7 text-muted">
+              {paragraph}
+            </p>
+          ))}
           <a
             href="#especialidades"
             className="mt-6 inline-flex items-center gap-2 rounded-full bg-petroleum px-5 py-3 text-[11px] font-bold tracking-[0.08em] text-white uppercase transition-all duration-300 hover:-translate-y-0.5"
@@ -38,7 +38,7 @@ export function About() {
         <ol className="relative space-y-6 border-l border-line pl-6">
           {timeline.map((item, i) => (
             <motion.li
-              key={item.year}
+              key={`${item.year}-${item.role}`}
               initial={{ opacity: 0, x: -12 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}

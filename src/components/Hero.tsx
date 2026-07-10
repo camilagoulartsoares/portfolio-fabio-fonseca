@@ -84,12 +84,12 @@ export function Hero() {
             Engenheiro Mecânico
           </p>
           <p className="mt-5 max-w-xl text-[clamp(1.15rem,2.2vw,1.45rem)] leading-snug font-semibold text-ink">
-            Transformando desafios de engenharia em soluções inteligentes.
+            Projetos mecânicos, impressão 3D e miniaturas com precisão de engenharia.
           </p>
           <p className="mt-4 max-w-xl text-[15px] leading-7 text-muted">
-            Combino precisão técnica e criatividade para desenvolver projetos
-            mecânicos sob medida — do conceito à entrega — com foco em qualidade,
-            clareza documental e resultado prático para a indústria.
+            Graduado pela UNIFEI. Atuo com modelagem CAD, prototipagem, drones
+            agrícolas e confecção de maquetes e veículos em escala — do conceito
+            à peça física, com polímeros, resinas e documentação técnica.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a

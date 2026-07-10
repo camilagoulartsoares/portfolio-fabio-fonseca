@@ -11,11 +11,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Fábio Fonseca | Engenheiro Mecânico",
   description:
-    "Portfólio profissional de Fábio Fonseca — engenharia mecânica, projetos CAD, prototipagem e soluções sob medida.",
+    "Engenheiro mecânico UNIFEI — projetos mecânicos, impressão 3D, drones agrícolas e miniaturas em escala.",
   openGraph: {
     title: "Fábio Fonseca | Engenheiro Mecânico",
     description:
-      "Transformando desafios de engenharia em soluções inteligentes.",
+      "Projetos mecânicos, impressão 3D e miniaturas com precisão de engenharia.",
     type: "website",
   },
 };
