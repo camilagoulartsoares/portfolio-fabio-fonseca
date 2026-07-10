@@ -18,7 +18,7 @@ export function Projects() {
           </h2>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, i) => (
             <motion.article
               key={project.title}
@@ -28,13 +28,13 @@ export function Projects() {
               transition={{ delay: i * 0.05 }}
               className="group relative overflow-hidden rounded-2xl bg-black shadow-[0_16px_40px_rgba(17,17,17,0.12)]"
             >
-              <div className="relative aspect-[3/4] overflow-hidden">
+              <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  sizes="(max-width:1024px) 50vw, 20vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width:1024px) 50vw, 33vw"
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
               </div>

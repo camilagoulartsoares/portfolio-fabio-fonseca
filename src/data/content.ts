@@ -70,36 +70,24 @@ export const specialties = [
   },
 ] as const;
 
+const asset = (path: string) =>
+  `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
+
 export const projects = [
   {
-    title: "Dispositivo de Fixação e Posicionamento",
-    category: "Projeto Mecânico",
-    image:
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80",
+    title: "Mitsubishi 3000GT VR-4 — Escala 1/10",
+    category: "Modelagem & Prototipagem",
+    image: asset("/images/projects/mitsubishi-3000gt.png"),
   },
   {
-    title: "Mesa Elevatória Hidráulica",
-    category: "Desenvolvimento de Produto",
-    image:
-      "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=900&q=80",
+    title: "Volkswagen Gol Quadrado — Escala 1/10",
+    category: "Modelagem & Prototipagem",
+    image: asset("/images/projects/gol-quadrado-frente.png"),
   },
   {
-    title: "Redutor de Velocidade",
-    category: "Projeto Mecânico",
-    image:
-      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    title: "Base Robótica Autônoma",
-    category: "Desenvolvimento de Produto",
-    image:
-      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    title: "Conjunto Estrutural Industrial",
-    category: "Projeto Mecânico",
-    image:
-      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=900&q=80",
+    title: "Letreiro LED — Engrenagem Personalizada",
+    category: "Impressão 3D & Eletrônica",
+    image: asset("/images/projects/letreiro-led-engrenagem.png"),
   },
 ] as const;
 
@@ -129,27 +117,19 @@ export const tools = [
 
 export const gallery = [
   {
-    src: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80",
-    category: "projetos",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80",
-    category: "projetos",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
+    src: asset("/images/projects/mitsubishi-3000gt.png"),
     category: "maquetes",
   },
   {
-    src: "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=800&q=80",
-    category: "projetos",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80",
-    category: "processos",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
+    src: asset("/images/projects/gol-quadrado-frente.png"),
     category: "maquetes",
+  },
+  {
+    src: asset("/images/projects/gol-quadrado-traseira.png"),
+    category: "maquetes",
+  },
+  {
+    src: asset("/images/projects/letreiro-led-engrenagem.png"),
+    category: "projetos",
   },
 ] as const;
