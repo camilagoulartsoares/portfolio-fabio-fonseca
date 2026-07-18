@@ -32,7 +32,7 @@ export function Gallery() {
               Galeria
             </p>
             <h2 className="mt-3 text-[clamp(1.6rem,3vw,2.1rem)] font-bold text-ink">
-              Detalhes, protótipos e entregas técnicas.
+              Registros visuais de protótipos, maquetes e entregas finais.
             </h2>
           </div>
           <div className="flex flex-wrap gap-2">

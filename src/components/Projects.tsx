@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { academicProjects, projects } from "@/data/content";
+import { projects } from "@/data/content";
 
 export function Projects() {
   return (
@@ -51,30 +51,6 @@ export function Projects() {
               </span>
             </motion.article>
           ))}
-        </div>
-
-        <div className="mt-14">
-          <p className="text-[11px] font-bold tracking-[0.16em] text-muted uppercase">
-            Projetos acadêmicos · UNIFEI
-          </p>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            {academicProjects.map((project, i) => (
-              <motion.article
-                key={project.title}
-                initial={{ opacity: 0, y: 14 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.06 }}
-                className="rounded-2xl border border-line bg-bg-soft p-6"
-              >
-                <p className="text-[11px] font-bold tracking-[0.1em] text-petroleum uppercase">
-                  {project.period}
-                </p>
-                <h3 className="mt-2 text-[17px] font-bold text-ink">{project.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-muted">{project.description}</p>
-              </motion.article>
-            ))}
-          </div>
         </div>
       </div>
     </section>

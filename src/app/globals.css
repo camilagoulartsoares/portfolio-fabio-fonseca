@@ -22,7 +22,7 @@
   --color-bg-soft: var(--bg-soft);
   --color-bg-muted: var(--bg-muted);
   --color-black: var(--black);
-  --font-sans: var(--font-inter);
+  --font-sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 html {

@@ -8,19 +8,22 @@ const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const highlights = [
   {
+    src: `${base}/images/projects/mini-torno-projeto.png`,
+    label: "Mini torno",
+    className: "left-0 top-10 z-10 w-[48%] rotate-[-7deg]",
+    imageClassName: "object-contain object-left bg-white p-3",
+  },
+  {
     src: `${base}/images/projects/mitsubishi-3000gt.png`,
     label: "Mitsubishi 3000GT",
-    className: "left-0 top-8 z-10 w-[58%] rotate-[-4deg]",
+    className: "bottom-0 left-[27%] z-30 w-[40%] rotate-[-1deg]",
+    imageClassName: "object-cover object-center",
   },
   {
-    src: `${base}/images/projects/troller-frente.png`,
-    label: "Troller T4",
-    className: "right-0 top-0 z-20 w-[55%] rotate-[3deg]",
-  },
-  {
-    src: `${base}/images/projects/bandeirante-frente.png`,
-    label: "Bandeirante",
-    className: "bottom-0 left-[18%] z-30 w-[62%] rotate-[-1deg]",
+    src: `${base}/images/projects/bomba-corte-projeto.png`,
+    label: "Bomba em corte",
+    className: "right-0 top-8 z-20 w-[44%] rotate-[6deg]",
+    imageClassName: "object-contain object-right bg-white p-3",
   },
 ];
 
@@ -46,7 +49,7 @@ export function Hero() {
             </div>
             <div>
               <p className="text-[12px] font-semibold tracking-[0.18em] text-petroleum uppercase">
-                Engenheiro Mecânico · UNIFEI
+                Engenheiro Mecânico
               </p>
               <p className="mt-1 text-sm text-muted">Poço Fundo · Minas Gerais</p>
             </div>
@@ -63,9 +66,8 @@ export function Hero() {
           </p>
 
           <p className="mt-4 max-w-[32rem] text-[15px] leading-7 text-muted">
-            Modelagem CAD, prototipagem e confecção de veículos em escala — do
-            conceito à peça física, com polímeros, resinas e documentação
-            técnica.
+            Experiência em engenharia do produto para transformar conceitos em
+            peças prontas com qualidade.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -104,7 +106,7 @@ export function Hero() {
                   alt={item.label}
                   fill
                   sizes="220px"
-                  className="object-cover"
+                  className={item.imageClassName}
                 />
               </div>
             </div>

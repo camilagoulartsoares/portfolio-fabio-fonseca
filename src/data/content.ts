@@ -1,10 +1,7 @@
 export const navLinks = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "#especialidades", label: "Especialidades" },
-  { href: "#projetos", label: "Projetos" },
-  { href: "#processo", label: "Processo" },
-  { href: "#ferramentas", label: "Ferramentas" },
-  { href: "#contato", label: "Contato" },
+  { href: "/", label: "Apresentação" },
+  { href: "/galeria", label: "Galeria de Projetos" },
+  { href: "/sobre", label: "Sobre Mim" },
 ] as const;
 
 export const aboutText = {
@@ -62,7 +59,7 @@ export const specialties = [
   {
     title: "Impressão 3D",
     description:
-      "FDM mono e multimaterial, polímeros e resinas — do protótipo à peça acabada.",
+      "FDM mono e multimaterial, polímeros e resinas — com grandes volumes de construção.",
   },
   {
     title: "Miniaturas e Maquetes",
@@ -85,9 +82,8 @@ export const specialties = [
       "Documentação clara, GD&T e desenhos prontos para manufatura e montagem.",
   },
   {
-    title: "Instrumentação e Ensaios",
-    description:
-      "Seleção de instrumentos, montagem experimental e validação — inclusive túnel de vento.",
+    title: "Integração eletrônica",
+    description: "Projetos com eletrificação e automação embarcada.",
   },
 ] as const;
 
@@ -164,6 +160,49 @@ export const tools = [
   "Desenho Técnico",
   "Metrologia",
   "Microsoft Excel",
+] as const;
+
+export const processShowcase = [
+  {
+    title: "Impressão 3D em grandes volumes",
+    subtitle: "Recursos técnicos utilizados no dia a dia",
+    description:
+      "Produção de peças com escala, repetibilidade e controle visual para protótipos, maquetes e componentes funcionais.",
+    leftImage: asset("/images/processos/mini-torno.png"),
+    leftAlt: "Equipamento de bancada usado no fluxo de prototipagem",
+    rightImage: asset("/images/processos/impressora-resina.png"),
+    rightAlt: "Impressora 3D de resina para peças com alto nível de definição",
+  },
+  {
+    title: "Lixamento com precisão",
+    subtitle: "Controle fino de acabamento",
+    description:
+      "Ajuste dimensional, refinamento de superfícies e preparação de peças para montagem, pintura e apresentação final.",
+    leftImage: asset("/images/processos/ferramenta-precisao.png"),
+    leftAlt: "Ferramenta elétrica de precisão para acabamento",
+    rightImage: asset("/images/processos/lixadeira-pneumatica.png"),
+    rightAlt: "Lixadeira pneumática para acabamento técnico",
+  },
+  {
+    title: "Pintura com acabamento nível automotivo",
+    subtitle: "Visual premium e consistência visual",
+    description:
+      "Aplicação de pintura, proteção e detalhamento visual para elevar a apresentação das miniaturas, maquetes e peças finais.",
+    leftImage: asset("/images/processos/aplicador-acabamento.png"),
+    leftAlt: "Aplicador para acabamento e pintura técnica",
+    rightImage: asset("/images/processos/pistola-pintura.png"),
+    rightAlt: "Pistola de pintura para acabamento automotivo",
+  },
+  {
+    title: "Adesivos com perfeição",
+    subtitle: "Identidade visual e detalhamento final",
+    description:
+      "Aplicação de grafismos, marcas e detalhes visuais para reforçar autenticidade, escala e qualidade de apresentação.",
+    leftImage: asset("/images/processos/adesivo-aplicado.png"),
+    leftAlt: "Detalhe de adesivo aplicado em miniatura",
+    rightImage: asset("/images/projects/letreiro-led-engrenagem.png"),
+    rightAlt: "Peça personalizada com identidade visual aplicada",
+  },
 ] as const;
 
 export const gallery = [

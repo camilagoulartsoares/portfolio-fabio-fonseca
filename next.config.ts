@@ -8,6 +8,7 @@ const basePath = forGitHubPages ? `/${repo}` : "";
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
+  devIndicators: false,
   basePath,
   assetPrefix: forGitHubPages ? `${basePath}/` : undefined,
   env: {

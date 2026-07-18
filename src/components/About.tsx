@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Award, Boxes, Sparkles, Target } from "lucide-react";
 import { aboutText, stats, timeline } from "@/data/content";
@@ -27,12 +28,12 @@ export function About() {
               {paragraph}
             </p>
           ))}
-          <a
-            href="#especialidades"
+          <Link
+            href="/#especialidades"
             className="mt-6 inline-flex items-center gap-2 rounded-full bg-petroleum px-5 py-3 text-[11px] font-bold tracking-[0.08em] text-white uppercase transition-all duration-300 hover:-translate-y-0.5"
           >
-            Conhecer mais sobre mim <ArrowRight size={15} />
-          </a>
+            Ver especialidades <ArrowRight size={15} />
+          </Link>
         </motion.div>
 
         <ol className="relative space-y-6 border-l border-line pl-6">
