@@ -10,19 +10,19 @@ const highlights = [
   {
     src: `${base}/images/projects/mini-torno-projeto.png`,
     label: "Mini torno",
-    className: "left-0 top-10 z-10 w-[48%] rotate-[-7deg]",
+    className: "left-0 top-6 z-10 w-[50%] rotate-[-7deg]",
     imageClassName: "object-contain object-left bg-white p-3",
   },
   {
     src: `${base}/images/projects/mitsubishi-3000gt.png`,
     label: "Mitsubishi 3000GT",
-    className: "bottom-0 left-[27%] z-30 w-[40%] rotate-[-1deg]",
+    className: "bottom-0 left-[27%] z-30 w-[46%] rotate-[-1deg]",
     imageClassName: "object-cover object-center",
   },
   {
     src: `${base}/images/projects/bomba-corte-projeto.png`,
     label: "Bomba em corte",
-    className: "right-0 top-8 z-20 w-[44%] rotate-[6deg]",
+    className: "right-0 top-3 z-20 w-[46%] rotate-[6deg]",
     imageClassName: "object-contain object-right bg-white p-3",
   },
 ];
