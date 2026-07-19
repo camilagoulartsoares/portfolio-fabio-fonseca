@@ -1,16 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Award, Boxes, Sparkles, Target } from "lucide-react";
-import { aboutText, stats, timeline } from "@/data/content";
-
-const icons = [Boxes, Target, Award, Sparkles];
+import { ArrowRight } from "lucide-react";
+import { aboutShowcaseImage, aboutText, timeline } from "@/data/content";
 
 export function About() {
   return (
     <section id="sobre" className="bg-white py-20 md:py-24">
-      <div className="mx-auto grid w-full max-w-[1200px] gap-10 px-5 lg:grid-cols-3">
+      <div className="mx-auto grid w-full max-w-[1200px] gap-10 px-5 lg:grid-cols-[1.05fr_0.85fr_1.1fr]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -56,25 +55,23 @@ export function About() {
           ))}
         </ol>
 
-        <div className="grid grid-cols-2 gap-3">
-          {stats.map((item, i) => {
-            const Icon = icons[i];
-            return (
-              <motion.article
-                key={item.label}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.06 }}
-                className="rounded-2xl border border-line bg-white p-5 shadow-[0_12px_30px_rgba(17,17,17,0.04)]"
-              >
-                <Icon className="mb-4 text-petroleum" size={20} strokeWidth={1.6} />
-                <p className="text-2xl font-extrabold text-ink">{item.value}</p>
-                <p className="mt-1 text-[12px] leading-5 text-muted">{item.label}</p>
-              </motion.article>
-            );
-          })}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.08 }}
+          className="self-start overflow-hidden rounded-[30px] border border-line bg-bg-soft shadow-[0_18px_42px_rgba(17,17,17,0.06)]"
+        >
+          <div className="relative aspect-[4/5] w-full md:aspect-[16/12] lg:aspect-[4/5]">
+            <Image
+              src={aboutShowcaseImage.src}
+              alt={aboutShowcaseImage.alt}
+              fill
+              sizes="(max-width:1024px) 100vw, 32vw"
+              className="object-fill"
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
   );
